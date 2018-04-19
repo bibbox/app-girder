@@ -2,8 +2,8 @@
 		"name": "Girder",
 		"short_name": "Girder",
 		"version": "latest",
-		"description": "Girder - A data management platform for the web, developed by Kitware.",
-        "short_description": "Girder - A data management platform for the web, developed by Kitware.",
+		"description": "Data management platform for the web, developed by Kitware",
+        "short_description": "Data management platform for the web, developed by Kitware",
 		"catalogue_url": "",
 		"application_url": "http://girder.readthedocs.io/en/latest/",
 		"tags": ["data management platform "]
