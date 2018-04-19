@@ -1,0 +1,4 @@
+{
+  runningcontainers:["§§INSTANCE-girder", "§§INSTANCE-girder-db"],
+  supportcontainers:["§§INSTANCE-girder-data"]
+}

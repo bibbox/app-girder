@@ -1,0 +1,45 @@
+version: '2'
+
+networks:
+    bibbox-default-network:
+      external: true
+
+services:
+
+  §§INSTANCE-girder:
+    image: girder/girder
+    container_name:  §§INSTANCE-girder
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
+    links:
+      - §§INSTANCE-girder-db:mongodb
+    ports:
+      - "§§PORT:8080"
+    command: --host 0.0.0.0 --database mongodb://mongodb:27017/girder
+    depends_on:
+      - §§INSTANCE-girder-db
+      - §§INSTANCE-girder-data
+    volumes_from: 
+      - §§INSTANCE-girder-data
+
+  §§INSTANCE-girder-db:
+    image: mongo:3.2
+    container_name: §§INSTANCE-girder-db:
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
+    image: mongo:3.2
+    ports:
+    - "27017"
+    volumes_from: 
+      - §§INSTANCE-girder-data:
+    depends_on:
+      - §§INSTANCE-girder-data:
+
+  §§INSTANCE-girder-data:
+    image: busybox
+    container_name: §§INSTANCE-girder-data
+    volumes:
+      - ./data/db:/data/db
+
