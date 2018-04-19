@@ -33,9 +33,9 @@ services:
     ports:
     - "27017"
     volumes_from: 
-      - §§INSTANCE-girder-data:
+      - §§INSTANCE-girder-data
     depends_on:
-      - §§INSTANCE-girder-data:
+      - §§INSTANCE-girder-data
 
   §§INSTANCE-girder-data:
     image: busybox
